@@ -1,5 +1,20 @@
-<script setup>
+<script>
 import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
+
+export default {
+  components: {
+    Menu,
+    MenuButton,
+    MenuItems,
+    MenuItem,
+  },
+  props: {
+    videos: {
+      type: Array,
+      required: true,
+    },
+  },
+};
 </script>
 
 <template>
@@ -28,7 +43,7 @@ import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
         class="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
       >
         <div class="px-1 py-1">
-          <MenuItem v-slot="{ active }">
+          <MenuItem v-slot="{ active }" v-for="video in videos">
             <button
               :class="[
                 active ? 'bg-slate-500 text-white' : 'text-gray-900',
@@ -40,37 +55,7 @@ import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
                 class="mr-2 h-5 w-5 text-slate-400"
                 aria-hidden="true"
               />
-              Video 1
-            </button>
-          </MenuItem>
-          <MenuItem v-slot="{ active }">
-            <button
-              :class="[
-                active ? 'bg-slate-500 text-white' : 'text-gray-900',
-                'group flex w-full items-center rounded-md px-2 py-2 text-sm',
-              ]"
-            >
-              <Video2
-                :active="active"
-                class="mr-2 h-5 w-5 text-slate-400"
-                aria-hidden="true"
-              />
-              Video 2
-            </button>
-          </MenuItem>
-          <MenuItem v-slot="{ active }">
-            <button
-              :class="[
-                active ? 'bg-slate-500 text-white' : 'text-gray-900',
-                'group flex w-full items-center rounded-md px-2 py-2 text-sm',
-              ]"
-            >
-              <Video3
-                :active="active"
-                class="mr-2 h-5 w-5 text-slate-400"
-                aria-hidden="true"
-              />
-              Video 3
+              {{ video.url }}
             </button>
           </MenuItem>
         </div>
