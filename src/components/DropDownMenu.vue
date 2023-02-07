@@ -24,7 +24,6 @@ const links = [
           :class="{
             'bg-blue-500 text-white': active,
             'bg-white text-black': !active,
-            ''
           }"
         >
           {{ link.label }}
