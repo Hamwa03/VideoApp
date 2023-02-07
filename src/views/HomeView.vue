@@ -1,7 +1,14 @@
-<script setup></script>
+<script setup>
+import VideoButton from "../components/VideoButton.vue";
+</script>
 
 <template>
-  <div>
-    <h1 class="text-2xl">VideoApp</h1>
-  </div>
+  <main class="text-center">
+    <h1 class="text-2xl text-white">VideoApp</h1>
+
+    <div class="rounded-xl bg-white p-2">
+      <video class="" src=""></video>
+      <VideoButton buttonText="Knapp" />
+    </div>
+  </main>
 </template>
