@@ -53,7 +53,6 @@ export default {
   },
   mounted() {
     this.getVideo();
-    console.log("test");
   },
 };
 </script>

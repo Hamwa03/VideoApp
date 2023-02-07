@@ -19,17 +19,11 @@ export default {
 
 <template>
   <Menu as="div" class="relative inline-block text-left">
-    <div>
-      <MenuButton
-        class="inline-flex justify-center rounded-md bg-slate-700 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
-      >
-        Videos
-        <ChevronDownIcon
-          class="text-slate-200 hover:text-violet-100"
-          aria-hidden="true"
-        />
-      </MenuButton>
-    </div>
+    <MenuButton
+      class="inline-flex justify-center rounded-md bg-slate-700 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+    >
+      Videos
+    </MenuButton>
 
     <transition
       enter-active-class="transition duration-100 ease-out"
@@ -50,11 +44,6 @@ export default {
                 'group flex w-full items-center rounded-md px-2 py-2 text-sm',
               ]"
             >
-              <Video1
-                :active="active"
-                class="mr-2 h-5 w-5 text-slate-400"
-                aria-hidden="true"
-              />
               {{ video.url }}
             </button>
           </MenuItem>
