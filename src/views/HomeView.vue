@@ -1,5 +1,6 @@
 <script setup>
 import VideoButton from "../components/VideoButton.vue";
+import DropDownMenu from "../components/DropDownMenu.vue";
 </script>
 
 <template>
