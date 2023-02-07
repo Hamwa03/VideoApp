@@ -3,15 +3,15 @@ import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
 </script>
 
 <template>
-  <div class="fixed top-16 w-56 text-right">
+  <div class="fixed w-56 text-right">
     <Menu as="div" class="relative inline-block text-left">
       <div>
         <MenuButton
-          class="inline-flex w-full justify-center rounded-md bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+          class="inline-flex justify-center rounded-md bg-slate-700 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
         >
           Videos
           <ChevronDownIcon
-            class="ml-2 -mr-1 h-5 w-5 text-violet-200 hover:text-violet-100"
+            class="text-slate-200 hover:text-violet-100"
             aria-hidden="true"
           />
         </MenuButton>
@@ -32,46 +32,46 @@ import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
             <MenuItem v-slot="{ active }">
               <button
                 :class="[
-                  active ? 'bg-violet-500 text-white' : 'text-gray-900',
+                  active ? 'bg-slate-500 text-white' : 'text-gray-900',
                   'group flex w-full items-center rounded-md px-2 py-2 text-sm',
                 ]"
               >
-                <EditIcon
+                <Video1
                   :active="active"
-                  class="mr-2 h-5 w-5 text-violet-400"
+                  class="mr-2 h-5 w-5 text-slate-400"
                   aria-hidden="true"
                 />
-                Video1
+                Video 1
               </button>
             </MenuItem>
             <MenuItem v-slot="{ active }">
               <button
                 :class="[
-                  active ? 'bg-violet-500 text-white' : 'text-gray-900',
+                  active ? 'bg-slate-500 text-white' : 'text-gray-900',
                   'group flex w-full items-center rounded-md px-2 py-2 text-sm',
                 ]"
               >
-                <DuplicateIcon
+                <Video2
                   :active="active"
-                  class="mr-2 h-5 w-5 text-violet-400"
+                  class="mr-2 h-5 w-5 text-slate-400"
                   aria-hidden="true"
                 />
-                Video2
+                Video 2
               </button>
             </MenuItem>
             <MenuItem v-slot="{ active }">
               <button
                 :class="[
-                  active ? 'bg-violet-500 text-white' : 'text-gray-900',
+                  active ? 'bg-slate-500 text-white' : 'text-gray-900',
                   'group flex w-full items-center rounded-md px-2 py-2 text-sm',
                 ]"
               >
-                <ArchiveIcon
+                <Video3
                   :active="active"
-                  class="mr-2 h-5 w-5 text-violet-400"
+                  class="mr-2 h-5 w-5 text-slate-400"
                   aria-hidden="true"
                 />
-                Video3
+                Video 3
               </button>
             </MenuItem>
           </div>
