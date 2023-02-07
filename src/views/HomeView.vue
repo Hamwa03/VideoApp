@@ -6,7 +6,7 @@ import DropDownMenu from "../components/DropDownMenu.vue";
 <template>
   <main class="text-center">
     <h1 class="text-2xl text-white">VideoApp</h1>
-
+    <DropDownMenu />
     <div class="rounded-xl bg-white flex justify-center p-2">
       <video class="w-3/4" src=""></video>
     </div>
