@@ -3,7 +3,7 @@ import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
 </script>
 
 <template>
-  <div class="fixed w-56 text-right">
+  <div class="w-56 text-right">
     <Menu as="div" class="relative inline-block text-left">
       <div>
         <MenuButton

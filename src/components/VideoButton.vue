@@ -1,7 +1,7 @@
 <template>
   <button
     type="button"
-    class="rounded-xl text-white bg-slate-900 hover:bg-slate-700 p-2"
+    class="rounded-md text-white bg-slate-700 hover:bg-opacity-30 p-2 text-sm font-medium"
   >
     {{ buttonText }}
   </button>
